@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="pnl-table">   
+            <h2 class="admin-lbl">Admin : Andrew Fuller</h2>
+
+            <input type="text" id="myInput" onkeyup="inputFilter()" placeholder="Müşteri Ara...">
+            <table class="table" id="mytable">
+                <tr>
+                    <th class="th1"> Id</th>   
+                    <th class="th2">Musteri Id</th>
+                    <th class="th3">
+                        <select name="filter_for" id="employeesDropdown" onchange="filterTable(this.value);" >
+                        <option value="All">Tüm Çalışanlar</option>
+                        <option value="Nancy Davolio">Nancy Davolio</option>
+                        <option value="Andrew Fuller">Andrew Fuller</option>
+                        <option value="Janet Leverling">Janet Leverling</option>
+                        <option value="Margaret Peacock">Margaret Peacock</option>
+                        <option value="Steven Buchanan">Steven Buchanan</option>
+                        <option value="Michael Suyama">Michael Suyama</option>
+                        <option value="Robert King">Robert King</option>
+                        <option value="Laura Callahan">Laura Callahan</option>
+                        <option value="Anne Dodsworth">Anne Dodsworth</option>
+                        <option value="James Brown">James Brown</option>
+                        <option value="Annie Dark">Annie Dark</option>
+                        </select>
+                    </th>
+                    <th class="th4 sorting">Siparis Tarihi</th>
+                    <th class="th5 sorting">Toplam Tutar</th>
+                    <th class="th6">Detay</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pnl-detail">
+            <div>
+                <div class="dtl-head"><h1 >Detay Fişi</h1></div>
+                <div class="pnl-order">
+                    <h3 id="oid" style="visibility:hidden">Order ID:</h3>
+                    <h3 class="pnl-id"></h3>
+                </div>
+                <div class="product-detail">
+                </div>
+            </div>
+            <div>
+                <div id="ucgen">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -20,10 +20,6 @@ const productArr=pro.products;
 const supp = require('./suppliers.js');
 const supplierArr=supp.suppliers;
 
-app.get('/suppliers', (request, response) => {
-    response.setHeader('Content-Type', 'application/json');
-    response.send(supplierArr);
-});
 app.get('/orders', (request, response) => {
     response.setHeader('Content-Type', 'application/json');
     response.send(orderArr);
@@ -31,6 +27,10 @@ app.get('/orders', (request, response) => {
 app.get('/employees', (request, response) => {
     response.setHeader('Content-Type', 'application/json');
     response.send(employeeArr);
+});
+app.get('/products', (request, response) => {
+    response.setHeader('Content-Type', 'application/json');
+    response.send(productArr);
 });
 
 app.listen(3000,() => {

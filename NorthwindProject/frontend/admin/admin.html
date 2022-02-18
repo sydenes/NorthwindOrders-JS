@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container" >
+
+        <div class="login-img">
+            <img src="images/nrthwnd.png" alt="">
+        </div>
+
+        <div class="login-pnl">
+            <div>
+                <div class="login-username login">
+                    <label for="username" class="lbl">Kullanıcı Adı:</label><br>
+                    <input type="input" id="username" class="username lgu">
+                </div>
+                <div class="login-password login">
+                    <label for="password" class="lbl">Şifre:</label><br>
+                    <input type="password" id="password" class="password lgu">
+                </div>
+                <div>
+                    <input type="button" value="Giriş" class="btn-dtl login btn" onclick="LoginControl()">
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+            function LoginControl(event){
+               
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if ( username == "andrewfuller" && password == "aftacoma"){
+            window.location = "http://127.0.0.1:5500/frontend/content/index.html";
+            }
+            else if(username == "" || password == ""){
+            alert("Kullancı Adı veya Şifre boş bırakılamaz !");
+            }
+            else{
+                alert("Kullanıcı adı veya şifrenizi yanlış girdiniz.");
+            }
+            }
+        </script>
+
+    </div>
+</body>
+</html>
